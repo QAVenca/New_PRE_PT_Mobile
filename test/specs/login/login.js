@@ -12,6 +12,7 @@ describe('Login Activity', () => {
         await expect($(HomeSelectors.loginIcon)).toHaveTextContaining('MARIA');
         //await expect($(HomeSelectors.loginIcon)).toHaveTextContaining('VENCAMOD');
     });
+    
     it('Login should fail and error missage have to be present', async () => {
         await Login.openLoginPage();
         await Login.login('vencaautomatedtest@gmail.com', 'testing3');

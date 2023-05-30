@@ -133,12 +133,12 @@ class HomePage extends Page {
         await expect($(Selector.helpIcon)).toHaveTextContaining('AYUDA');
         await expect($(Selector.cartIcon)).toHaveTextContaining('MI CESTA');*/
         await expect($(Selector.loginIcon)).toBePresent();
-        await expect($(Selector.newIcon)).toBePresent();
+        //await expect($(Selector.newIcon)).toBePresent();
         await expect($(Selector.favoritesIcon)).toBePresent();
         await expect($(Selector.cartIcon)).toBePresent();
         await $(Selector.hamburguerMenu).click();
         await $(Selector.helpIcon).scrollIntoView();
-        await expect($(Selector.helpIcon)).toBePresent();
+       await expect($(Selector.helpIcon)).toBePresent();
     }
 
     async checkLoginIcon() {

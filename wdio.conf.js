@@ -42,7 +42,7 @@ exports.config = {
             //'./test/specs/cart/*.js'
         ],
         debug: [
-            './test/specs/chicksize/*.js'
+            './test/specs/login/*.js'
         ],
     },
     // Patterns to exclude.
