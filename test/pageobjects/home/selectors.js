@@ -14,7 +14,7 @@ module.exports = {
     helpIcon: "#heading15",
     cartIcon: "#cartZone",
     buyFromPrintedCatalog: "[data-uitest=\"catalog\"]",
-    hamburguerMenu: "#navToggle",
+    hamburguerMenu: "[data-uitest=\"navigateShowMenu\"]",
     categoryTitle: "#mainContent > div:nth-child(4) > a",
     categoryOne: "#mainContent > div:nth-child(5) > a",
     categorySeven: "#mainContent > div:nth-child(8) > a",
