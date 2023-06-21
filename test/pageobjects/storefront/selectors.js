@@ -1,9 +1,9 @@
 module.exports = {
     storefront: "#heading-navigation-17",
     allCollection: "[data-uitest=\"navigateProductSubcategories\"]",
-    title: "#mainContent > div.row.asyncprod > article.col-xs-12.dflex.px-10 > div.newCommercialTitle.pt-4.pb-3 > h1",
+    title: "#mainContent > div > article.col-xs-12.dflex.flex-column.px-10 > div.newCommercialTitle.dflex.align-items-center.pt-3.pb-3 > h1",
     dressLink: "[class=\"tab swiper-slide bold700 swiper-slide-next\"]",
-    dressStorefront: "#mainContent > div.row.asyncprod > article.col-xs-12.dflex.px-10 > div.newCommercialTitle.pt-4.pb-3 > h1",
+    dressStorefront: "#mainContent > div > article.col-xs-12.dflex.flex-column.px-10 > div.newCommercialTitle.dflex.align-items-center.pt-3.pb-3 > h1",
     product: "[data-uitest=\"storefrontProductsImage\"]",
     buttons: "#btBotons",
     prev: "#btBotons > div:nth-child(1) > a",

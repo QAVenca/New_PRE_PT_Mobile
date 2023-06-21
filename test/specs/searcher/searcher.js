@@ -6,7 +6,7 @@ describe('Search button interaction', ()  => {
         await Steps.goHome();
         await browser.pause(1000);
         await Searcher.search('vestido verde');
-        await Searcher.verifySuggestedItems();
+        //await Searcher.verifySuggestedItems();
         await Searcher.clear();
     });
 

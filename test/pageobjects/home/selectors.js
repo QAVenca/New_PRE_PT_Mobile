@@ -1,8 +1,8 @@
 module.exports = {
     popupModal: "#onetrust-group-container",
     cookieID: "#onetrust-accept-btn-handler",
-    searcher: "#Search",
-    searchInput: "#top-search-bar-container > div > div > form > input",
+    searcher: "#navSearch",
+    searchInput: "#dfd-searchbox-id-gBnuU-input",
     suggestedSearch: "#suggestedItems",
     //clearSearchButton: "#top-search-bar-container > div > div > form > button.sc-hKwDye.ikvZUT.syte-ts-search-form__clear-button",
     searchButton: "#top-search-bar-container > div > div > form > button.sc-dkPtRN.fabHvK.syte-ts-search-form__submit-button",

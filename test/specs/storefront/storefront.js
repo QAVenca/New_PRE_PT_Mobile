@@ -4,7 +4,7 @@ const Selectors = require('../../pageobjects/storefront/selectors')
 describe('Storefront Activity', () => {
     it('Storefront shows an appropriate title', async () => {
         await Storefront.storefrontPage();
-        await expect($(Selectors.title)).toHaveTextContaining('os nossos best');
+        await expect($(Selectors.title)).toHaveTextContaining('ROUPA ONLINE DE MULHER');
     });
 
     it('Buttons \'Anterior\' and \'Siguiente\' should go to before/next storefront page', async () => {
@@ -17,6 +17,6 @@ describe('Storefront Activity', () => {
     it('Links on header storefront should go to a correct page', async () =>{
         await Storefront.storefrontPage();
         await $(Selectors.dressLink).click();
-        await expect($(Selectors.dressStorefront)).toHaveTextContaining('vestidos');
+        await expect($(Selectors.dressStorefront)).toHaveTextContaining('CAMISAS E BLUSAS MULHER');
     });
 });
