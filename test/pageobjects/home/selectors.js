@@ -9,6 +9,7 @@ module.exports = {
     checkProductPage: "//*[@id=\"addToBasket\"]/span[1]",
     wrongSearchResult: "[class=\"no-items-found\"]",
     loginIcon: "#user",
+    logoutButton: "#logout",
     newIcon: "#camera > a",
     favoritesIcon: "#heart",
     helpIcon: "#heading15",
