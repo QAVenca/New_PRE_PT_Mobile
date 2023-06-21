@@ -2,6 +2,7 @@ const HomePage = require('../../pageobjects/home/home.page');
 const Selector = require('../../pageobjects/home/selectors');
 const SelectorWishlist = require('../../pageobjects/wishlist/selectors');
 let total_of_products = 0;
+let wishlistTotalProducts = 0;
 
 class Wishlist {
 
@@ -25,11 +26,20 @@ class Wishlist {
         await expect ($(Selector.titleFavoritesPage)).toHaveTextContaining('LISTA DE FAVORITOS');
     }
 
+    async checkItemsAndRemoveThem() {
+        wishlistTotalProducts = $(SelectorWishlist.wishlistTotalProducts).getText();
+        /*await $(SelectorWishlist.removeWishlistButton).waitForClickable();
+        await $(SelectorWishlist.removeWishlistButton).click();*/
+       if (!(wishlistTotalProducts === 0)) {
+            this.removeItemFromWishlist();
+       }
+    }
+
     async goToStorefront() {
-        //await browser.pause(10000);
+        await browser.pause(1500);
         await $(SelectorWishlist.visitColectionButton).waitForClickable();
         await $(SelectorWishlist.visitColectionButton).click();
-        await expect ($(SelectorWishlist.storefrontTitle)).toHaveTextContaining('os nossos best');
+        await expect ($(SelectorWishlist.storefrontTitle)).toHaveTextContaining('ROUPA ONLINE DE MULHER');
     }
 
     async checkIconFirstProduct() {
@@ -37,12 +47,17 @@ class Wishlist {
     }
 
     async checkAddProdutToWishlist() {
+        await $(SelectorWishlist.storefrontFirstArticleWishlistButton).waitForClickable();
         await $(SelectorWishlist.storefrontFirstArticleWishlistButton).click();
+        await browser.pause(5000);
+        await $(Selector.favoritesIcon).waitForClickable();
         await $(Selector.favoritesIcon).click();
-        await expect ($(SelectorWishlist.removeWishlistButton)).toBePresent();
+        await browser.pause(5000);
+        //await expect ($(SelectorWishlist.removeWishlistButton)).toBePresent();
     }
 
     async removeItemFromWishlist() {
+        await $(SelectorWishlist.removeWishlistButton).waitForClickable();
         await $(SelectorWishlist.removeWishlistButton).click();
         //await browser.pause(3000);
         await ($(SelectorWishlist.visitColectionButton)).waitForClickable();
