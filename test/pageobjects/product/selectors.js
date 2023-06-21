@@ -5,7 +5,7 @@ module.exports = {
     headBanner: "#cBanner",
     //personalization_products: "#syte-personalization-container",
     personalization_products: "#recommendedLooks",
-    similar_products: "#similar_items-syte-slider-mw",
+    similar_products: "#syte-similar-items-container",
     addButton: "#addToBasket",
     size: "[data-id-for-select=\"L\"]",
     sizeList: "#botonesProd > div.col-xs-6.pl-2 > div",
