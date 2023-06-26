@@ -30,7 +30,7 @@ module.exports = {
     promoFrame: "BtPopin_1647271731828-6481 .close",
     inputUsername: "[data-uitest=\"emailLogin\"]",
     titleNewPage: "#syte-camera-tour-screen-container\ syte-camera-tour-screen-container-venca > div > div > div.sc-hKwDye.fbFoyL.syte-tourV2-main-wrapper > div > div.start-btns-sectionstyled__StartWrapper-sc-1k3rvi4-0.ktwMWj.syte-tourV2-start-wrapper",
-    titleFavoritesPage: "#results > div.col-sm-12.voffset15.antiVoffset10 > div.dflex.justify-content-center.align-items-center > span.FS13.thin.text-uppercase.pr-2",
+    titleFavoritesPage: "#results > div.row > section > div > h1",
     titleHelpPage: "//*[@id=\"newHelp\"]/div/section[1]/h1",
     titleCartPage: "body > main > div:nth-child(4) > h1",
     /*titlePrintedPage: "body > main > div:nth-child(4) > h1",*/
