@@ -15,10 +15,10 @@ describe('ChickSize Activity', () => {
         await expect($(Selectors.next)).toBeClickable();
     });
 
-    it.skip('Links on header ChickSize should go to a correct page', async () =>{
+    it('Links on header ChickSize should go to a correct page', async () =>{
         await Chicksize.chicksizePage();
         await $(Selectors.dressLink).click();
-        await expect($(Selectors.dressStorefront)).toHaveTextContaining('túnicas e vestidos');
+        await expect($(Selectors.title)).toHaveTextContaining('VESTIDOS EM TAMANHOS GRANDES PARA MULHER');
     });
 
     it.skip('"Solo productos de Venca" checkbox should function', async () =>{
