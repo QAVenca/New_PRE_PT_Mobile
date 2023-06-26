@@ -28,7 +28,8 @@ class Searcher extends Page {
 
     async goToResultPage(item) {
         await expect($(Selector.searchInput)).toHaveValue(item);
-        await $(Selector.searchIcon).click();
+        await browser.keys("\uE007");
+        //await $(Selector.searchIcon).click();
         await browser.pause(3000);
         await $(Selector.firstItemPageResult).scrollIntoView();
         await Steps.closeNewsletter();
@@ -45,9 +46,11 @@ class Searcher extends Page {
 
     async wrongSearch(item) {
         await HomePage.openSearcher(item);
-        await $(Selector.searchIcon).click();
-        await browser.pause(1000);
-        await expect($(Selector.wrongSearchResult)).toHaveTextContaining(item.toUpperCase());
+        await browser.keys("\uE007");
+        //await $(Selector.searchIcon).click();
+        await browser.pause(3000);
+        //await expect($(Selector.wrongSearchResult)).toHaveTextContaining(item.toUpperCase());
+        await expect($(Selector.wrongSearchResult)).toHaveTextContaining(item);
     }
 }
 

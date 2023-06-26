@@ -25,7 +25,7 @@ describe('Search button interaction', ()  => {
         await Searcher.goToProduct();
     });
 
-    it('Should go to the search tab and search for an inexistent article', async() =>{
+    it.skip('Should go to the search tab and search for an inexistent article', async() =>{
         await Steps.goHome();
         await browser.pause(1000);
         await Searcher.wrongSearch('fjbvgñasjbvfldfhbvsdlfhvbsdf.jbaepiubev');

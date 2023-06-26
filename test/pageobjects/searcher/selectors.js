@@ -1,10 +1,10 @@
 module.exports = {
     suggestedItems: "#suggestedItems",
     searchIcon: "//*[@id=\"top-search-bar-container\"]/div/div/form/button[2]",
-    searchInput: "#top-search-bar-container > div > div > form > input",
-    firstItemPageResult: "#filter-search-container > div.products-styles__ProductsListingSection-sc-1qarpt3-0.kzZpor.syte-ts-products-listing > ul > div:nth-child(1)",
+    searchInput: "[data-uitest=\"Input Box\"]",
+    firstItemPageResult: "#df-result-product-24fee85f5eccf0864ec253a874945d53",
     checkProductPage: "#addToBasket",
-    wrongSearchResult: "#filter-search-container > div.products-styles__ProductsListingSection-sc-1qarpt3-0.kzZpor.syte-ts-products-listing > div.products-styles__CenteredColumn-sc-1qarpt3-6.bXkDWq > div > h5 > span > span",
+    wrongSearchResult: "#dfd-tabs-66WwR",
 }
 
 /*class SelectorsHome{

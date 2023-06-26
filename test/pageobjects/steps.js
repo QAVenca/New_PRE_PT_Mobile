@@ -14,27 +14,45 @@ let app_modal = false;
 class Steps extends Page {
 
     async closeCookies() {
-        if(cookies_check == false){
+        const cookies_are_present = await $(selectorCookies.cookieID);
+        let cookiesClickable = await cookies_are_present.isClickable();
+
+        if (cookiesClickable) {
+            await $(selectorCookies.cookieID).waitForClickable();
+            await $(selectorCookies.cookieID).click();
+        }
+
+        /*if(cookies_check == false){
             await $(selectorCookies.cookieID).waitForDisplayed();
             await $(selectorCookies.cookieID).click();
             cookies_check = true;
-        }
+        }*/
     }
 
     async closeNewsletter(){
-        if(news_check == false) {
+        const newsletter_is_present = await $(selectorNews.modalClose);
+        let newsletterClickable = await newsletter_is_present.isClickable();
+
+        if (newsletterClickable) {
             await $(selectorNews.modalClose).waitForClickable();
             await $(selectorNews.modalClose).click();
-            news_check = true;
         }
     }
 
     async closeAppModal(){
-        if(app_modal == false) {
+        const appModal_is_present = await $(selectorAppModal.modalClose);
+        let appModalClickable = await appModal_is_present.isClickable();
+
+        if (appModalClickable) {
+            await $(selectorAppModal.modalClose).waitForClickable();
+            await $(selectorAppModal.modalClose).click();
+        }
+
+        /*if(app_modal == false) {
             await $(selectorAppModal.modalClose).waitForClickable();
             await $(selectorAppModal.modalClose).click();
             app_modal = true;
-        }
+        }*/
     }
 
     async goHome() {
