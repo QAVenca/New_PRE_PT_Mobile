@@ -44,6 +44,7 @@ module.exports = {
     languageEuskera: "#socialIcons > div > div.text-uppercase.text-center.posRelative.antiVoffset2.googtrans > div.langContainer.posRelative.notranslate.open > ul > li:nth-child(4) > span",
     ekomiFooter: "#newsletter > div.pl-3.pr-3.voffset20 > span:nth-child(1)",
     cartWishlist: "#furtherProducts", 
+    footer: "#socialIcons",
 }
 
 /*class SelectorsHome{

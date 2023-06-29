@@ -23,18 +23,19 @@ class Storefront extends Page {
         await this.open();
         await Steps.closeCookies();
         await Steps.closeAppModal();
-        await $(SelectorHome.hamburguerMenu).moveTo();
-        await browser.pause(500);
-        await $(SelectorHome.hamburguerMenu).click();
-        await browser.pause(500);
-        await $(Selector.chicksize).moveTo();
-        await browser.pause(500);
-        await $(Selector.chicksize).click();
         await browser.pause(1500);
+        await $(SelectorHome.hamburguerMenu).moveTo();
+        await browser.pause(3000);
+        await $(SelectorHome.hamburguerMenu).click();
+        await browser.pause(3000);
+        await $(Selector.chicksize).moveTo();
+        await browser.pause(3000);
+        await $(Selector.chicksize).click();
+        await browser.pause(3500);
         await $(Selector.allChicksize).moveTo();
-        await browser.pause(500);
+        await browser.pause(3000);
         await $(Selector.allChicksize).click();
-        await browser.pause(500);
+        await browser.pause(3000);
     }
 
     async sortByVenca() {

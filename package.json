@@ -15,5 +15,5 @@
     "debug": "npm run wdio -- --suite debug",
     "wdio": "wdio run wdio.conf.js",
     "suites": "npm run wdio -- --suite login --suite products"
-  }
-}
+  } 
+} 

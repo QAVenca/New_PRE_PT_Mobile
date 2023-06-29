@@ -13,12 +13,20 @@ let app_modal = false;
 
 class Steps extends Page {
 
+    async initialCloseAll(){
+        await this.closeCookies();
+        await $(selectorHome.footer).scrollIntoView();
+        await this.closeNewsletter();
+        await $(selectorHome.footer).scrollIntoView();
+    }
+
     async closeCookies() {
         const cookies_are_present = await $(selectorCookies.cookieID);
         let cookiesClickable = await cookies_are_present.isClickable();
 
         if (cookiesClickable) {
             await $(selectorCookies.cookieID).waitForClickable();
+            await browser.pause(1500);
             await $(selectorCookies.cookieID).click();
         }
 
@@ -40,19 +48,18 @@ class Steps extends Page {
     }
 
     async closeAppModal(){
-        const appModal_is_present = await $(selectorAppModal.modalClose);
-        let appModalClickable = await appModal_is_present.isClickable();
+        let appModal;
+        try {
+            appModal = await $(selectorAppModal.modalClose).waitForClickable(); 
+        } catch (error) {
+            appModal = false;
+        }
 
-        if (appModalClickable) {
+        if (appModal) {
+
             await $(selectorAppModal.modalClose).waitForClickable();
             await $(selectorAppModal.modalClose).click();
         }
-
-        /*if(app_modal == false) {
-            await $(selectorAppModal.modalClose).waitForClickable();
-            await $(selectorAppModal.modalClose).click();
-            app_modal = true;
-        }*/
     }
 
     async goHome() {
