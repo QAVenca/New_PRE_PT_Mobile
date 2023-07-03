@@ -10,7 +10,7 @@ class Login extends Page {
         await $(selectors.inputPassword).waitForEnabled({timeout: 10000});
         await $(selectors.inputPassword).setValue(password);
         await $(selectors.btnSubmit).click();
-        await browser.pause(10000);  // TEMPS EXCESSIU
+        await browser.pause(8000);  // TEMPS EXCESSIU
     }
 
     async Logout() {
