@@ -20,6 +20,11 @@ class Steps extends Page {
         await $(selectorHome.footer).scrollIntoView();
     }
 
+    async checkLogin() {
+        await browser.pause(1500);
+        login_check = await $("[data-uitest=\"userName\"]").isDisplayed();
+    }
+    
     async closeCookies() {
         const cookies_are_present = await $(selectorCookies.cookieID);
         let cookiesClickable = await cookies_are_present.isClickable();
@@ -78,6 +83,7 @@ class Steps extends Page {
         await browser.pause(1500);
         await this.closeAppModal();
         await browser.pause(1500);
+        await this.checkLogin();
         if(login_check == false) {
             await $(selectorHome.loginIcon).waitForClickable();
             await $(selectorHome.loginIcon).click();
