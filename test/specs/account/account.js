@@ -3,8 +3,10 @@ const account = require('../../pageobjects/account/account.page');
 const selectors = require('../../pageobjects/account/selectors');
 
 describe('Account activity', () => {
-    it('Click on user icon and my account should go to my account', async () => {
+    it.only('Click on user icon and my account should go to my account', async () => {
         await steps.goToMyAccount();
+        await browser.pause(1500);
+        await $(selectors.accountPanel).waitForClickable();
         await expect($(selectors.accountPanel)).toBeDisplayedInViewport();
     });
 

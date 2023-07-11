@@ -79,16 +79,22 @@ class Steps extends Page {
         await this.closeAppModal();
         await browser.pause(1500);
         if(login_check == false) {
+            await $(selectorHome.loginIcon).waitForClickable();
             await $(selectorHome.loginIcon).click();
             await login.login(Data.customer.email, Data.customer.currentPassword);
-            await browser.pause(3000);
+            //await browser.pause(3000);
+            await $(selectorHome.loginIcon).waitForClickable();
             await $(selectorHome.loginIcon).click();
-            //await $(selectorAccount.myAccount).click();
-            login_check = true;
+            await browser.pause(1500);
+            /*await $(selectorAccount.myAccount).waitForClickable();
+            await $(selectorAccount.myAccount).click();*/
+            //login_check = true;
             await browser.pause(3000);
         } else if(login_check == true) { 
+            await $(selectorHome.loginIcon).waitForClickable();
             await $(selectorHome.loginIcon).click();
-            //await $(selectorAccount.myAccount).click();
+            /*await $(selectorAccount.myAccount).waitForClickable();
+            await $(selectorAccount.myAccount).click();*/
         }
     }
 
