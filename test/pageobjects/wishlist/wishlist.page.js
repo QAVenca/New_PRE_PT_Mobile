@@ -24,7 +24,8 @@ class Wishlist {
         await $(Selector.favoritesIcon).waitForClickable();
         await $(Selector.favoritesIcon).click();
         await browser.pause(3000);
-        await expect ($(Selector.titleFavoritesPage)).toHaveTextContaining('LISTA DE FAVORITOS');
+        //await expect ($(Selector.titleFavoritesPage)).toHaveTextContaining('LISTA DE FAVORITOS');
+        await expect(browser).toHaveUrlContaining('WishList');
     }
 
     async checkItemsAndRemoveThem() {
