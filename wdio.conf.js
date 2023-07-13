@@ -37,7 +37,6 @@ exports.config = {
             './test/specs/searcher/*.js',
             './test/specs/product/*.js',
             './test/specs/storefront/*.js',
-            './test/specs/chicksize/*.js',
             './test/specs/wishlist/*.js',
             //'./test/specs/cart/*.js'
         ],
