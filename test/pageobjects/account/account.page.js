@@ -44,6 +44,7 @@ class AccountPage extends Page {
     }
 
     async goToMyContactSection() {
+        await $(selectors.myContact).waitForClickable();
         await $(selectors.myContact).click();
         await expect($(selectors.saveContactPreferences)).toBePresent();
     }
